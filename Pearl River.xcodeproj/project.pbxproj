@@ -7,19 +7,50 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		DD090C232DA7F0E9008485C4 /* Settings.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD090C222DA7F0E9008485C4 /* Settings.swift */; };
+		DD090C252DA809F6008485C4 /* PassionOne-Black.ttf in Resources */ = {isa = PBXBuildFile; fileRef = DD090C242DA809F6008485C4 /* PassionOne-Black.ttf */; };
+		DD090C282DA80A2B008485C4 /* DayCatchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD090C272DA80A2B008485C4 /* DayCatchView.swift */; };
+		DD090C2A2DA90B5B008485C4 /* Shop.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD090C292DA90B5B008485C4 /* Shop.swift */; };
+		DD090C2C2DA96855008485C4 /* DailyQuest.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD090C2B2DA96855008485C4 /* DailyQuest.swift */; };
 		DD1FE67A2DA6933A00CFA58F /* Pearl_RiverApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD1FE6792DA6933A00CFA58F /* Pearl_RiverApp.swift */; };
-		DD1FE67C2DA6933A00CFA58F /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD1FE67B2DA6933A00CFA58F /* ContentView.swift */; };
 		DD1FE67E2DA6933C00CFA58F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DD1FE67D2DA6933C00CFA58F /* Assets.xcassets */; };
 		DD1FE6822DA6933C00CFA58F /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DD1FE6812DA6933C00CFA58F /* Preview Assets.xcassets */; };
+		DD1FE6902DA693B000CFA58F /* Loading.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD1FE68F2DA693B000CFA58F /* Loading.swift */; };
+		DD1FE6922DA693B700CFA58F /* Menu.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD1FE6912DA693B700CFA58F /* Menu.swift */; };
+		DD1FE6942DA693C500CFA58F /* Game.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD1FE6932DA693C500CFA58F /* Game.swift */; };
+		DD1FE6962DA693DF00CFA58F /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD1FE6952DA693DF00CFA58F /* Coordinator.swift */; };
+		DD1FE6982DA693FF00CFA58F /* SizeExtention.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD1FE6972DA693FF00CFA58F /* SizeExtention.swift */; };
+		DD1FE69A2DA6941500CFA58F /* ColorExtention.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD1FE6992DA6941500CFA58F /* ColorExtention.swift */; };
+		DD1FE69C2DA6943000CFA58F /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD1FE69B2DA6943000CFA58F /* Model.swift */; };
+		DD1FE69E2DA6946200CFA58F /* Background.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD1FE69D2DA6946200CFA58F /* Background.swift */; };
+		DD1FE6A02DA6948C00CFA58F /* Controller.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD1FE69F2DA6948C00CFA58F /* Controller.swift */; };
+		DD5CAB712DAD6DD500C8A1F3 /* SwiftUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD5CAB702DAD6DD500C8A1F3 /* SwiftUIView.swift */; };
+		DD5CAB732DAF022F00C8A1F3 /* GameFinish.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD5CAB722DAF022F00C8A1F3 /* GameFinish.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		DD090C222DA7F0E9008485C4 /* Settings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Settings.swift; sourceTree = "<group>"; };
+		DD090C242DA809F6008485C4 /* PassionOne-Black.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "PassionOne-Black.ttf"; sourceTree = "<group>"; };
+		DD090C262DA80A05008485C4 /* Pearl-River-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "Pearl-River-Info.plist"; sourceTree = SOURCE_ROOT; };
+		DD090C272DA80A2B008485C4 /* DayCatchView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DayCatchView.swift; sourceTree = "<group>"; };
+		DD090C292DA90B5B008485C4 /* Shop.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Shop.swift; sourceTree = "<group>"; };
+		DD090C2B2DA96855008485C4 /* DailyQuest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DailyQuest.swift; sourceTree = "<group>"; };
 		DD1FE6762DA6933A00CFA58F /* Pearl River.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Pearl River.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		DD1FE6792DA6933A00CFA58F /* Pearl_RiverApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Pearl_RiverApp.swift; sourceTree = "<group>"; };
-		DD1FE67B2DA6933A00CFA58F /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		DD1FE67D2DA6933C00CFA58F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		DD1FE67F2DA6933C00CFA58F /* Pearl_River.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Pearl_River.entitlements; sourceTree = "<group>"; };
 		DD1FE6812DA6933C00CFA58F /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		DD1FE68F2DA693B000CFA58F /* Loading.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Loading.swift; sourceTree = "<group>"; };
+		DD1FE6912DA693B700CFA58F /* Menu.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Menu.swift; sourceTree = "<group>"; };
+		DD1FE6932DA693C500CFA58F /* Game.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Game.swift; sourceTree = "<group>"; };
+		DD1FE6952DA693DF00CFA58F /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
+		DD1FE6972DA693FF00CFA58F /* SizeExtention.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SizeExtention.swift; sourceTree = "<group>"; };
+		DD1FE6992DA6941500CFA58F /* ColorExtention.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorExtention.swift; sourceTree = "<group>"; };
+		DD1FE69B2DA6943000CFA58F /* Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
+		DD1FE69D2DA6946200CFA58F /* Background.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Background.swift; sourceTree = "<group>"; };
+		DD1FE69F2DA6948C00CFA58F /* Controller.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Controller.swift; sourceTree = "<group>"; };
+		DD5CAB702DAD6DD500C8A1F3 /* SwiftUIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftUIView.swift; sourceTree = "<group>"; };
+		DD5CAB722DAF022F00C8A1F3 /* GameFinish.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameFinish.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -52,8 +83,15 @@
 		DD1FE6782DA6933A00CFA58F /* Pearl River */ = {
 			isa = PBXGroup;
 			children = (
+				DD090C262DA80A05008485C4 /* Pearl-River-Info.plist */,
 				DD1FE6792DA6933A00CFA58F /* Pearl_RiverApp.swift */,
-				DD1FE67B2DA6933A00CFA58F /* ContentView.swift */,
+				DD1FE6882DA6935800CFA58F /* Views */,
+				DD1FE6892DA6935E00CFA58F /* SubViews */,
+				DD1FE68A2DA6936700CFA58F /* Extentions */,
+				DD1FE68C2DA6937700CFA58F /* Coordinator */,
+				DD1FE68B2DA6937000CFA58F /* Models */,
+				DD1FE68D2DA6937F00CFA58F /* Fonts */,
+				DD1FE68E2DA6938500CFA58F /* Sounds */,
 				DD1FE67D2DA6933C00CFA58F /* Assets.xcassets */,
 				DD1FE67F2DA6933C00CFA58F /* Pearl_River.entitlements */,
 				DD1FE6802DA6933C00CFA58F /* Preview Content */,
@@ -67,6 +105,71 @@
 				DD1FE6812DA6933C00CFA58F /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		DD1FE6882DA6935800CFA58F /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				DD1FE68F2DA693B000CFA58F /* Loading.swift */,
+				DD1FE6912DA693B700CFA58F /* Menu.swift */,
+				DD1FE6932DA693C500CFA58F /* Game.swift */,
+				DD5CAB702DAD6DD500C8A1F3 /* SwiftUIView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		DD1FE6892DA6935E00CFA58F /* SubViews */ = {
+			isa = PBXGroup;
+			children = (
+				DD1FE69D2DA6946200CFA58F /* Background.swift */,
+				DD1FE69F2DA6948C00CFA58F /* Controller.swift */,
+				DD090C222DA7F0E9008485C4 /* Settings.swift */,
+				DD090C272DA80A2B008485C4 /* DayCatchView.swift */,
+				DD090C292DA90B5B008485C4 /* Shop.swift */,
+				DD090C2B2DA96855008485C4 /* DailyQuest.swift */,
+				DD5CAB722DAF022F00C8A1F3 /* GameFinish.swift */,
+			);
+			path = SubViews;
+			sourceTree = "<group>";
+		};
+		DD1FE68A2DA6936700CFA58F /* Extentions */ = {
+			isa = PBXGroup;
+			children = (
+				DD1FE6972DA693FF00CFA58F /* SizeExtention.swift */,
+				DD1FE6992DA6941500CFA58F /* ColorExtention.swift */,
+			);
+			path = Extentions;
+			sourceTree = "<group>";
+		};
+		DD1FE68B2DA6937000CFA58F /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				DD1FE69B2DA6943000CFA58F /* Model.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		DD1FE68C2DA6937700CFA58F /* Coordinator */ = {
+			isa = PBXGroup;
+			children = (
+				DD1FE6952DA693DF00CFA58F /* Coordinator.swift */,
+			);
+			path = Coordinator;
+			sourceTree = "<group>";
+		};
+		DD1FE68D2DA6937F00CFA58F /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				DD090C242DA809F6008485C4 /* PassionOne-Black.ttf */,
+			);
+			path = Fonts;
+			sourceTree = "<group>";
+		};
+		DD1FE68E2DA6938500CFA58F /* Sounds */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Sounds;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -129,6 +232,7 @@
 			files = (
 				DD1FE6822DA6933C00CFA58F /* Preview Assets.xcassets in Resources */,
 				DD1FE67E2DA6933C00CFA58F /* Assets.xcassets in Resources */,
+				DD090C252DA809F6008485C4 /* PassionOne-Black.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -139,8 +243,22 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DD1FE67C2DA6933A00CFA58F /* ContentView.swift in Sources */,
+				DD1FE6922DA693B700CFA58F /* Menu.swift in Sources */,
+				DD1FE6902DA693B000CFA58F /* Loading.swift in Sources */,
+				DD1FE6962DA693DF00CFA58F /* Coordinator.swift in Sources */,
+				DD1FE6982DA693FF00CFA58F /* SizeExtention.swift in Sources */,
+				DD090C2C2DA96855008485C4 /* DailyQuest.swift in Sources */,
 				DD1FE67A2DA6933A00CFA58F /* Pearl_RiverApp.swift in Sources */,
+				DD5CAB732DAF022F00C8A1F3 /* GameFinish.swift in Sources */,
+				DD090C282DA80A2B008485C4 /* DayCatchView.swift in Sources */,
+				DD1FE6A02DA6948C00CFA58F /* Controller.swift in Sources */,
+				DD1FE69E2DA6946200CFA58F /* Background.swift in Sources */,
+				DD090C2A2DA90B5B008485C4 /* Shop.swift in Sources */,
+				DD1FE6942DA693C500CFA58F /* Game.swift in Sources */,
+				DD1FE69A2DA6941500CFA58F /* ColorExtention.swift in Sources */,
+				DD090C232DA7F0E9008485C4 /* Settings.swift in Sources */,
+				DD1FE69C2DA6943000CFA58F /* Model.swift in Sources */,
+				DD5CAB712DAD6DD500C8A1F3 /* SwiftUIView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -274,6 +392,7 @@
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "Pearl-River-Info.plist";
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphonesimulator*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphoneos*]" = YES;
@@ -282,9 +401,8 @@
 				"INFOPLIST_KEY_UILaunchScreen_Generation[sdk=iphonesimulator*]" = YES;
 				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphoneos*]" = UIStatusBarStyleDefault;
 				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphonesimulator*]" = UIStatusBarStyleDefault;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 17.5;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.5;
 				LD_RUNPATH_SEARCH_PATHS = "@executable_path/Frameworks";
 				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = "@executable_path/../Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 14.5;
@@ -292,7 +410,8 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "f1.Pearl-River";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = auto;
-				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -312,6 +431,7 @@
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "Pearl-River-Info.plist";
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphonesimulator*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphoneos*]" = YES;
@@ -320,9 +440,8 @@
 				"INFOPLIST_KEY_UILaunchScreen_Generation[sdk=iphonesimulator*]" = YES;
 				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphoneos*]" = UIStatusBarStyleDefault;
 				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphonesimulator*]" = UIStatusBarStyleDefault;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 17.5;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.5;
 				LD_RUNPATH_SEARCH_PATHS = "@executable_path/Frameworks";
 				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = "@executable_path/../Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 14.5;
@@ -330,7 +449,8 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "f1.Pearl-River";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = auto;
-				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";

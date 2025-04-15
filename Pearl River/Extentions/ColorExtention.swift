@@ -6,3 +6,12 @@
 //
 
 import Foundation
+import SwiftUI
+
+extension Color {
+    
+    static let darkblueshadow = Color("darkBlueShadow")
+    static let textshop = Color("textShop")
+
+}
+
