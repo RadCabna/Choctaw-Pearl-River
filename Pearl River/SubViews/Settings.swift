@@ -82,6 +82,9 @@ struct Settings: View {
                 .scaledToFit()
                 .frame(height: screenHeight*0.17)
                 .offset(y: screenHeight*0.28)
+                .onTapGesture {
+                    openAppStoreForRating()
+                }
             Image("arrowBack")
                 .resizable()
                 .scaledToFit()
@@ -92,7 +95,27 @@ struct Settings: View {
                     showSettings.toggle()
                 }
         }
+        
+        .onChange(of: music) { _ in
+            if !music {
+                SoundManager.instance.stopAllSounds()
+            } else {
+                SoundManager.instance.stopAllSounds()
+                SoundManager.instance.playSound(sound: "riverSoundMain")
+            }
+        }
+        
     }
+    
+    func openAppStoreForRating() {
+        guard let appStoreURL = URL(string: "itms-apps://itunes.apple.com/app/id6744639152?action=write-review") else {
+            return
+        }
+        if UIApplication.shared.canOpenURL(appStoreURL) {
+            UIApplication.shared.open(appStoreURL)
+        }
+    }
+    
 }
 
 #Preview {

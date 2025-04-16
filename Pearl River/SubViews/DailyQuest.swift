@@ -9,6 +9,7 @@ import SwiftUI
 
 struct DailyQuest: View {
     @AppStorage("count") var count = 0
+    @AppStorage("fishCount") var fishCount = 0
     @Binding var showQuest: Bool
     @State private var questData = UserDefaults.standard.array(forKey: "questData") as? [Int] ?? [0,0,0,0,0]
     @State private var questArray = Arrays.questsArray
@@ -89,6 +90,12 @@ struct DailyQuest: View {
                         .offset(y: screenHeight*0.07)
                 )
         }
+        
+        .onAppear {
+            questData[4] = count
+            questData[0] = fishCount
+        }
+        
     }
 }
 

@@ -12,10 +12,11 @@ struct Shop: View {
     @AppStorage("enableFishCount") var enableFishCount = 1
     @AppStorage("menNumber") var menNumber = 1
     @Binding var showShop: Bool
-    @State private var fishSelected = false
+    @State private var fishSelected = true
     @State private var fishArray = Arrays.shopFishArray
     @State private var fishData = UserDefaults.standard.array(forKey: "fishData") as? [Int] ?? [3,1,0,0,0,0,0,0]
     @State private var menData = UserDefaults.standard.array(forKey: "menData") as? [Int] ?? [3,1,0,0,0,0]
+    @State private var questData = UserDefaults.standard.array(forKey: "questData") as? [Int] ?? [0,0,0,0,0]
     @State private var menArray = Arrays.shopMenArray
     
     var body: some View {
@@ -48,7 +49,7 @@ struct Shop: View {
                     .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .topTrailing)
                     .padding(.trailing)
                     .onTapGesture {
-                        count += 100
+//                        count += 100
                     }
             }
             HStack {
@@ -254,6 +255,8 @@ struct Shop: View {
                 dataArray[item+1] = 1
             }
             UserDefaults.standard.setValue(dataArray, forKey: dataArrayName)
+            questData[3] += 1
+            UserDefaults.standard.setValue(questData, forKey: "questData")
         }
     }
     

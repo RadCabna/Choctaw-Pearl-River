@@ -9,6 +9,7 @@ import SwiftUI
 
 struct Loading: View {
     @EnvironmentObject var coordinator: Coordinator
+    @AppStorage("levelInfo") var level = false
     @State private var loadingProgress: CGFloat = 1
     @State private var logoOpacity: CGFloat = 0
     var body: some View {
@@ -24,11 +25,18 @@ struct Loading: View {
 //                        .ignoresSafeArea()
                         .frame(width: height*1.12, height: width*1.1)
                     VStack {
-                       Image("loadingLogo")
-                            .resizable()
-                            .scaledToFit()
-                            .frame(height: width*0.25)
-                            .opacity(logoOpacity)
+                        ZStack {
+                            Image("yellowLogoCircle")
+                                .resizable()
+                                .scaledToFit()
+                                .frame(height: width*0.25)
+                                .opacity(logoOpacity)
+                            Image("loadingLogo1")
+                                .resizable()
+                                .scaledToFit()
+                                .frame(height: width*0.23)
+                                .opacity(logoOpacity)
+                        }
                         Spacer()
                         Image("loadingText")
                              .resizable()
@@ -65,11 +73,18 @@ struct Loading: View {
                         .resizable()
                         .ignoresSafeArea()
                     VStack {
-                       Image("loadingLogo")
-                            .resizable()
-                            .scaledToFit()
-                            .frame(height: height*0.25)
-                            .opacity(logoOpacity)
+                        ZStack {
+                            Image("yellowLogoCircle")
+                                .resizable()
+                                .scaledToFit()
+                                .frame(height: height*0.25)
+                                .opacity(logoOpacity)
+                            Image("loadingLogo1")
+                                .resizable()
+                                .scaledToFit()
+                                .frame(height: height*0.23)
+                                .opacity(logoOpacity)
+                        }
                         Spacer()
                         Image("loadingText")
                              .resizable()
@@ -101,6 +116,14 @@ struct Loading: View {
             }
         }
         
+        .onChange(of: level) { _ in
+            if level {
+                DispatchQueue.main.asyncAfter(deadline: .now()) {
+                    coordinator.navigate(to: .mainMenu)
+                }
+            }
+        }
+        
         .onAppear{
             loadingAnimation()
         }
@@ -117,7 +140,7 @@ struct Loading: View {
             }
         }
         DispatchQueue.main.asyncAfter(deadline: .now() + 4) {
-            coordinator.navigate(to: .mainMenu)
+//            coordinator.navigate(to: .mainMenu)
         }
     }
     

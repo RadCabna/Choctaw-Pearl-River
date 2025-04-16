@@ -9,6 +9,7 @@ import SwiftUI
 
 struct GameFinish: View {
     @EnvironmentObject var coordinator: Coordinator
+    @AppStorage("sound") var sound = true
     @Binding var gameCount: Int
     @Binding var gameFinish: Bool
     var body: some View {
@@ -39,6 +40,13 @@ struct GameFinish: View {
             }
             .offset(x: screenWidth*0.14, y: screenHeight*0.04)
         }
+        
+        .onAppear {
+            if sound {
+                SoundManager.instance.playSound(sound: "winSound")
+            }
+        }
+        
     }
 }
 

@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct DayCatchView: View {
-    @AppStorage("dayNumber") var dayNumber = 3
+    @AppStorage("dayNumber") var dayNumber = 0
     @Binding var showCatchDay: Bool
     var body: some View {
         ZStack {
@@ -72,6 +72,13 @@ struct DayCatchView: View {
                     .offset(y:-screenHeight*0.1)
             }
         }
+        
+        .onAppear{
+            if dayNumber < 25 {
+                dayNumber += 1
+            }
+        }
+        
     }
 }
 

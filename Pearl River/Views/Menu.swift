@@ -11,10 +11,14 @@ struct Menu: View {
     @EnvironmentObject var coordinator: Coordinator
     @AppStorage("count") var count = 0
     @AppStorage("fishCount") var fishCount = 0
+    @AppStorage("sound") var sound = true
+    @AppStorage("vibration") var vibration = true
+    @AppStorage("music") var music = true
     @State private var showCatchDay = false
     @State private var showSettings = false
     @State private var showShop = false
     @State private var showDaily = false
+    @State private var showAchievements = false
     @State private var remainingTime: TimeInterval = 24 * 60 * 60
     @State private var isButtonActive = false
     @State private var timer: Timer?
@@ -25,7 +29,7 @@ struct Menu: View {
             Image("menuBG")
                 .resizable()
                 .ignoresSafeArea()
-            Image("menuLogo")
+            Image("menuLogo1")
                 .resizable()
                 .scaledToFit()
                 .frame(height: screenHeight*0.12)
@@ -38,6 +42,7 @@ struct Menu: View {
                     .frame(height: screenHeight*0.14)
                     .padding(.bottom)
                     .onTapGesture {
+                        SoundManager.instance.stopAllSounds()
                         coordinator.navigate(to: .game)
                     }
                 HStack {
@@ -46,6 +51,9 @@ struct Menu: View {
                         .scaledToFit()
                         .frame(height: screenHeight*0.12)
                         .offset(y: screenHeight*0.02)
+                        .onTapGesture {
+                            showAchievements.toggle()
+                        }
                     Spacer()
                     Image("shopButton")
                         .resizable()
@@ -122,7 +130,9 @@ struct Menu: View {
                     )
                     .onTapGesture {
                         showCatchDay.toggle()
+                        resetTimer()
                     }
+                    .disabled(!isButtonActive)
             }
             .frame(maxWidth: .infinity,maxHeight: .infinity, alignment: .topTrailing)
             .padding(.trailing)
@@ -139,10 +149,16 @@ struct Menu: View {
             if showShop {
                 Shop(showShop: $showShop)
             }
+            if showAchievements {
+               Achievements(showAchievements: $showAchievements)
+            }
         }
         
         .onAppear {
             loadTimerState()
+            if music {
+                SoundManager.instance.playSound(sound: "riverSoundMain")
+            }
         }
         .onDisappear {
                     saveTimerState()

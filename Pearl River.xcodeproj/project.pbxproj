@@ -7,6 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		DD02EE3A2DAFD54A002081C3 /* Achievements.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD02EE392DAFD54A002081C3 /* Achievements.swift */; };
+		DD02EE3C2DAFE5E9002081C3 /* SoundManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD02EE3B2DAFE5E9002081C3 /* SoundManager.swift */; };
+		DD02EE402DAFE612002081C3 /* catchSound.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = DD02EE3D2DAFE612002081C3 /* catchSound.mp3 */; };
+		DD02EE412DAFE612002081C3 /* dropSound.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = DD02EE3E2DAFE612002081C3 /* dropSound.mp3 */; };
+		DD02EE422DAFE612002081C3 /* riverSoundMain.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = DD02EE3F2DAFE612002081C3 /* riverSoundMain.mp3 */; };
+		DD02EE442DAFE8DC002081C3 /* winSound.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = DD02EE432DAFE8DC002081C3 /* winSound.mp3 */; };
+		DD02EE462DAFE9EC002081C3 /* dropWaterSound.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = DD02EE452DAFE9EC002081C3 /* dropWaterSound.mp3 */; };
 		DD090C232DA7F0E9008485C4 /* Settings.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD090C222DA7F0E9008485C4 /* Settings.swift */; };
 		DD090C252DA809F6008485C4 /* PassionOne-Black.ttf in Resources */ = {isa = PBXBuildFile; fileRef = DD090C242DA809F6008485C4 /* PassionOne-Black.ttf */; };
 		DD090C282DA80A2B008485C4 /* DayCatchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD090C272DA80A2B008485C4 /* DayCatchView.swift */; };
@@ -24,18 +31,24 @@
 		DD1FE69C2DA6943000CFA58F /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD1FE69B2DA6943000CFA58F /* Model.swift */; };
 		DD1FE69E2DA6946200CFA58F /* Background.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD1FE69D2DA6946200CFA58F /* Background.swift */; };
 		DD1FE6A02DA6948C00CFA58F /* Controller.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD1FE69F2DA6948C00CFA58F /* Controller.swift */; };
-		DD5CAB712DAD6DD500C8A1F3 /* SwiftUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD5CAB702DAD6DD500C8A1F3 /* SwiftUIView.swift */; };
 		DD5CAB732DAF022F00C8A1F3 /* GameFinish.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD5CAB722DAF022F00C8A1F3 /* GameFinish.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		DD02EE392DAFD54A002081C3 /* Achievements.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Achievements.swift; sourceTree = "<group>"; };
+		DD02EE3B2DAFE5E9002081C3 /* SoundManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SoundManager.swift; sourceTree = "<group>"; };
+		DD02EE3D2DAFE612002081C3 /* catchSound.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = catchSound.mp3; sourceTree = "<group>"; };
+		DD02EE3E2DAFE612002081C3 /* dropSound.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = dropSound.mp3; sourceTree = "<group>"; };
+		DD02EE3F2DAFE612002081C3 /* riverSoundMain.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = riverSoundMain.mp3; sourceTree = "<group>"; };
+		DD02EE432DAFE8DC002081C3 /* winSound.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = winSound.mp3; sourceTree = "<group>"; };
+		DD02EE452DAFE9EC002081C3 /* dropWaterSound.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = dropWaterSound.mp3; sourceTree = "<group>"; };
 		DD090C222DA7F0E9008485C4 /* Settings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Settings.swift; sourceTree = "<group>"; };
 		DD090C242DA809F6008485C4 /* PassionOne-Black.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "PassionOne-Black.ttf"; sourceTree = "<group>"; };
 		DD090C262DA80A05008485C4 /* Pearl-River-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "Pearl-River-Info.plist"; sourceTree = SOURCE_ROOT; };
 		DD090C272DA80A2B008485C4 /* DayCatchView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DayCatchView.swift; sourceTree = "<group>"; };
 		DD090C292DA90B5B008485C4 /* Shop.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Shop.swift; sourceTree = "<group>"; };
 		DD090C2B2DA96855008485C4 /* DailyQuest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DailyQuest.swift; sourceTree = "<group>"; };
-		DD1FE6762DA6933A00CFA58F /* Pearl River.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Pearl River.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		DD1FE6762DA6933A00CFA58F /* Pearl River Games.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Pearl River Games.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		DD1FE6792DA6933A00CFA58F /* Pearl_RiverApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Pearl_RiverApp.swift; sourceTree = "<group>"; };
 		DD1FE67D2DA6933C00CFA58F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		DD1FE67F2DA6933C00CFA58F /* Pearl_River.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Pearl_River.entitlements; sourceTree = "<group>"; };
@@ -49,7 +62,6 @@
 		DD1FE69B2DA6943000CFA58F /* Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
 		DD1FE69D2DA6946200CFA58F /* Background.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Background.swift; sourceTree = "<group>"; };
 		DD1FE69F2DA6948C00CFA58F /* Controller.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Controller.swift; sourceTree = "<group>"; };
-		DD5CAB702DAD6DD500C8A1F3 /* SwiftUIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftUIView.swift; sourceTree = "<group>"; };
 		DD5CAB722DAF022F00C8A1F3 /* GameFinish.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameFinish.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -75,7 +87,7 @@
 		DD1FE6772DA6933A00CFA58F /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				DD1FE6762DA6933A00CFA58F /* Pearl River.app */,
+				DD1FE6762DA6933A00CFA58F /* Pearl River Games.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -113,7 +125,6 @@
 				DD1FE68F2DA693B000CFA58F /* Loading.swift */,
 				DD1FE6912DA693B700CFA58F /* Menu.swift */,
 				DD1FE6932DA693C500CFA58F /* Game.swift */,
-				DD5CAB702DAD6DD500C8A1F3 /* SwiftUIView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -128,6 +139,7 @@
 				DD090C292DA90B5B008485C4 /* Shop.swift */,
 				DD090C2B2DA96855008485C4 /* DailyQuest.swift */,
 				DD5CAB722DAF022F00C8A1F3 /* GameFinish.swift */,
+				DD02EE392DAFD54A002081C3 /* Achievements.swift */,
 			);
 			path = SubViews;
 			sourceTree = "<group>";
@@ -168,6 +180,12 @@
 		DD1FE68E2DA6938500CFA58F /* Sounds */ = {
 			isa = PBXGroup;
 			children = (
+				DD02EE452DAFE9EC002081C3 /* dropWaterSound.mp3 */,
+				DD02EE432DAFE8DC002081C3 /* winSound.mp3 */,
+				DD02EE3D2DAFE612002081C3 /* catchSound.mp3 */,
+				DD02EE3E2DAFE612002081C3 /* dropSound.mp3 */,
+				DD02EE3F2DAFE612002081C3 /* riverSoundMain.mp3 */,
+				DD02EE3B2DAFE5E9002081C3 /* SoundManager.swift */,
 			);
 			path = Sounds;
 			sourceTree = "<group>";
@@ -189,7 +207,7 @@
 			);
 			name = "Pearl River";
 			productName = "Pearl River";
-			productReference = DD1FE6762DA6933A00CFA58F /* Pearl River.app */;
+			productReference = DD1FE6762DA6933A00CFA58F /* Pearl River Games.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -230,6 +248,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DD02EE422DAFE612002081C3 /* riverSoundMain.mp3 in Resources */,
+				DD02EE462DAFE9EC002081C3 /* dropWaterSound.mp3 in Resources */,
+				DD02EE402DAFE612002081C3 /* catchSound.mp3 in Resources */,
+				DD02EE442DAFE8DC002081C3 /* winSound.mp3 in Resources */,
+				DD02EE412DAFE612002081C3 /* dropSound.mp3 in Resources */,
 				DD1FE6822DA6933C00CFA58F /* Preview Assets.xcassets in Resources */,
 				DD1FE67E2DA6933C00CFA58F /* Assets.xcassets in Resources */,
 				DD090C252DA809F6008485C4 /* PassionOne-Black.ttf in Resources */,
@@ -252,13 +275,14 @@
 				DD5CAB732DAF022F00C8A1F3 /* GameFinish.swift in Sources */,
 				DD090C282DA80A2B008485C4 /* DayCatchView.swift in Sources */,
 				DD1FE6A02DA6948C00CFA58F /* Controller.swift in Sources */,
+				DD02EE3A2DAFD54A002081C3 /* Achievements.swift in Sources */,
 				DD1FE69E2DA6946200CFA58F /* Background.swift in Sources */,
 				DD090C2A2DA90B5B008485C4 /* Shop.swift in Sources */,
 				DD1FE6942DA693C500CFA58F /* Game.swift in Sources */,
 				DD1FE69A2DA6941500CFA58F /* ColorExtention.swift in Sources */,
 				DD090C232DA7F0E9008485C4 /* Settings.swift in Sources */,
 				DD1FE69C2DA6943000CFA58F /* Model.swift in Sources */,
-				DD5CAB712DAD6DD500C8A1F3 /* SwiftUIView.swift in Sources */,
+				DD02EE3C2DAFE5E9002081C3 /* SoundManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -388,7 +412,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"Pearl River/Preview Content\"";
-				DEVELOPMENT_TEAM = TJC4VDAK2F;
+				DEVELOPMENT_TEAM = "";
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
@@ -407,8 +431,8 @@
 				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = "@executable_path/../Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 14.5;
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "f1.Pearl-River";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_BUNDLE_IDENTIFIER = com.pearlrvr.games;
+				PRODUCT_NAME = "Pearl River Games";
 				SDKROOT = auto;
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
 				SUPPORTS_MACCATALYST = NO;
@@ -427,7 +451,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"Pearl River/Preview Content\"";
-				DEVELOPMENT_TEAM = TJC4VDAK2F;
+				DEVELOPMENT_TEAM = "";
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
@@ -446,8 +470,8 @@
 				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = "@executable_path/../Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 14.5;
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "f1.Pearl-River";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_BUNDLE_IDENTIFIER = com.pearlrvr.games;
+				PRODUCT_NAME = "Pearl River Games";
 				SDKROOT = auto;
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
 				SUPPORTS_MACCATALYST = NO;

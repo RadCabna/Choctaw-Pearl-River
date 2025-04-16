@@ -13,6 +13,14 @@ struct Game: View {
     @AppStorage("fishCount") var fishCount = 0
     @AppStorage("enableFishCount") var enableFishCount = 1
     @AppStorage("menNumber") var menNumber = 1
+    @AppStorage("sound") var sound = true
+    @AppStorage("vibration") var vibration = true
+    @AppStorage("music") var music = true
+    @State private var bgName = "gameBG1"
+    @State private var menName = "men1"
+    @State private var lineSize: CGFloat = 0
+    @State private var lineOffsetY: CGFloat = 0
+    @State private var menOffsetX: CGFloat = 0
     @State private var countInSet = 0
     @State private var enableFishCountInARow = 1
     @State private var isFishCaught = false
@@ -30,6 +38,7 @@ struct Game: View {
     @State private var fishTimer: Timer? = nil
     @State private var catchFishNameArray: [SwimingFish] = []
     @State private var gameFinish = false
+    @State private var achievementsData = UserDefaults.standard.array(forKey: "achievementsData") as? [Int] ?? [0,0,0,0,0,0,0,0,0,0]
     private var totalImageHeight: CGFloat {
         screenHeight * 3
     }
@@ -41,7 +50,7 @@ struct Game: View {
             GeometryReader { geometry in
                 ZStack(alignment: .top) {
                     ZStack {
-                        Image("gameBG1")
+                        Image(bgName)
                             .resizable()
                             .frame(width: geometry.size.width,
                                    height: self.totalImageHeight)
@@ -49,9 +58,9 @@ struct Game: View {
                     .offset(y: -self.diveDepth)
                     ZStack{
                         Rectangle()
-                            .frame(width: 2, height:self.diveDepth+screenHeight*0.085)
+                            .frame(width: 2, height:self.diveDepth+lineSize)
                             .foregroundColor(.white)
-                            .offset(x: screenWidth*0.69, y:screenHeight*0.28 - self.diveDepth*0.5)
+                            .offset(x: screenWidth*0.69, y:lineOffsetY - self.diveDepth*0.5)
                         Image("hook")
                             .resizable()
                             .scaledToFit()
@@ -75,7 +84,7 @@ struct Game: View {
                             .frame(width: screenWidth*0.6)
                             .offset(x: screenWidth*0.3, y: screenHeight*0.3 - self.diveDepth)
                         
-                        Image("men1")
+                        Image(menName)
                             .resizable()
                             .frame(width: screenWidth*0.55, height: screenHeight*0.17)
                             .offset(x: screenWidth*0.42, y: screenHeight*0.216 - self.diveDepth)
@@ -193,11 +202,53 @@ struct Game: View {
         }
         
         .onAppear {
+            enableFishCountInARow = enableFishCount
+            menUpdate()
             fishArray.shuffle()
             startFishArray = fishArray
             startTimer()
             print(screenWidth)
             print(screenHeight)
+        }
+    }
+    
+    func menUpdate() {
+        switch menNumber {
+        case 1:
+            bgName = "gameBG1"
+            menName = "men1"
+        lineSize = screenHeight*0.085
+        lineOffsetY = screenHeight*0.28
+        case 2:
+            bgName = "gameBG2"
+            menName = "men2"
+            lineSize = screenHeight*0.17
+            lineOffsetY = screenHeight*0.232
+        case 3:
+            bgName = "gameBG3"
+            menName = "men3"
+            lineSize = screenHeight*0.135
+            lineOffsetY = screenHeight*0.255
+        case 4:
+            bgName = "gameBG4"
+            menName = "men4"
+            lineSize = screenHeight*0.165
+            lineOffsetY = screenHeight*0.24
+        case 5:
+            bgName = "gameBG1"
+            menName = "men5"
+            lineSize = screenHeight*0.17
+            lineOffsetY = screenHeight*0.23
+        case 6:
+            bgName = "gameBG2"
+            menName = "men6"
+            lineSize = screenHeight*0.18
+            lineOffsetY = screenHeight*0.226
+        default:
+            bgName = "gameBG1"
+            menName = "men1"
+            lineSize = screenHeight*0.085
+            lineOffsetY = screenHeight*0.28
         }
     }
     
@@ -216,6 +267,9 @@ struct Game: View {
                 count += catchFishNameArray[i].cost
                 countInSet += catchFishNameArray[i].cost
                 fishCount += 1
+                achievementsData[0] = 1
+                achievementsData[1] = 1
+                UserDefaults.standard.setValue(achievementsData, forKey: "achievementsData")
             }
             catchFishNameArray.removeAll()
             enableFishCountInARow = enableFishCount
@@ -294,11 +348,22 @@ struct Game: View {
     
     private func handleButtonAction() {
         if !isDiving && !isGoingUp {
+            if sound {
+                SoundManager.instance.playSound(sound: "dropSound")
+                SoundManager.instance.playSound(sound: "dropWaterSound")
+            }
+            if vibration {
+                generateImpactFeedback(style: .medium)
+            }
             goingDown()
             isDiving = true
         } else if isDiving && !isGoingUp {
             stopMoving()
             goingUp()
+            if sound {
+                SoundManager.instance.stopAllSounds()
+                SoundManager.instance.playSound(sound: "catchSound")
+            }
             isDiving = false
             isGoingUp = true
             
@@ -311,8 +376,17 @@ struct Game: View {
             if diveDepth < maxDiveDepth-10 {
                 diveDepth += maxDiveDepth/700
             } else {
+                if sound {
+                    SoundManager.instance.stopAllSounds()
+                    SoundManager.instance.playSound(sound: "catchSound")
+                }
+                if vibration {
+                    generateImpactFeedback(style: .heavy)
+                }
                 stopMoving()
                 goingUp()
+                achievementsData[3] = 1
+                UserDefaults.standard.setValue(achievementsData, forKey: "achievementsData")
             }
         }
     }
@@ -323,6 +397,7 @@ struct Game: View {
                 diveDepth -= maxDiveDepth/700
             } else {
                 stopMoving()
+                SoundManager.instance.stopAllSounds()
                 self.isDiving = false
                 self.isGoingUp = false
                 DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) {
@@ -342,8 +417,6 @@ struct Game: View {
         self.isGoingUp = false
         
         goingDown()
-        
-        // Запланировать подъем после достижения дна
         DispatchQueue.main.asyncAfter(deadline: .now() + 7) {
             if !self.isGoingUp {
                 self.startAscent()
@@ -361,11 +434,17 @@ struct Game: View {
                 stopMoving()
             }
         }
-        
-        // Завершить процесс после подъема
         DispatchQueue.main.asyncAfter(deadline: .now() + 7) {
             self.isDiving = false
             self.isGoingUp = false
+        }
+    }
+    
+    func generateImpactFeedback(style: UIImpactFeedbackGenerator.FeedbackStyle) {
+        let generator = UIImpactFeedbackGenerator(style: style)
+        if vibration {
+            generator.prepare()
+            generator.impactOccurred()
         }
     }
     
